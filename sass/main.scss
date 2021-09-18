@@ -1,0 +1,53 @@
+// Required
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "bootstrap-5.1.1/scss/functions";
+// 2. Include any default variable overrides here
+
+  //Exemplo:
+  //$body-bg: #000;
+  //$body-color: #111;
+  $primary: #0074d9;
+  $danger: #ff4136;
+
+
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "bootstrap-5.1.1/scss/variables";
+@import "bootstrap-5.1.1/scss/mixins";
+
+$theme-colors: (
+  "primary": $primary,
+  "danger": $danger
+);
+
+// Create your own map
+$custom-colors: (
+  "custom-color": #900
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+// Tint a color: mix a color with white
+@function tint-color($color, $weight) {
+  @return mix(white, $color, $weight);
+}
+
+// Shade a color: mix a color with black
+@function shade-color($color, $weight) {
+  @return mix(black, $color, $weight);
+}
+
+// Shade the color if the weight is positive, else tint it
+@function shift-color($color, $weight) {
+  @return if($weight > 0, shade-color($color, $weight), tint-color($color, -$weight));
+}
+
+.custom-element {
+  color: tint-color($primary, 30%);
+}
+
+.custom-element-2 {
+  color: shade-color($danger, 10%);
+}
