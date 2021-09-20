@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="style_sass.css" >
+    <!--CSS customizado-->
+      <link rel="stylesheet" href="style_sass.css" >
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap-5.1.1/dist/css/bootstrap.min.css" >
@@ -13,16 +14,46 @@
     <title>Página de teste</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
 
     <!--LOCAL PARA INCLUIR/REMOVER E TESTAR OS CONTEÚDOS PRÉ-COMPILADOS DO BOOTSTRAP-->
     <!-- =================INÍCIO-->
-    <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
-        <div class="col">Column</div>
-        <div class="col">Column</div>
-        <div class="col">Column</div>
-        <div class="col">Column</div>
+    <h2 id="all-colors">
+      Hello, world!
+      <a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#all-colors" style="padding-left: 0.375em;"></a>
+    </h2>
+
+    <div class="container-xxl bd-layout">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12"> <!--responsividade das colunas-->
+          <!-- brincando com as cores do back, sem customizar o CSS -->
+          <div class="p-3 mb-3 bg-primary bg-gradient text-white"> azul com gradiente </div>
+          <div class="p-3 mb-3 bg-primary text-white"> azul puro </div>
+          <div class="p-3 mb-3 bg-primary bg-opacity-75 text-white">azul com 75% de opacidade </div>
+          <div class="p-3 mb-3 bg-primary bg-opacity-50 text-white">azul com 50% de opacidade </div>
+          <div class="p-3 mb-3 bg-primary bg-opacity-25 text-white">azul com 25% de opacidade </div>
+          <div class="p-3 mb-3 bg-primary bg-opacity-10 text-white">azul com 10% de opacidade </div>
+          <div class="p-3 mb-3 bg-primary text-white" style="--bs-bg-opacity: .05;">azul com 5% de opacidade </div>
+        </div>
+        <!-- brincando com as cores do back, com o CSS customizado-->
+        <!-- pra fazer isso, só modifiquei o sass/main.scss e rodei. Ele atualizou todo o CSS gerado automaticamente em style_sass.css-->
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="p-3 mb-3 bg-my-color-3 bg-gradient text-white"> laranja com gradiente </div>
+          <div class="p-3 mb-3 bg-my-color-3 text-white"> laranja puro </div>
+          <div class="p-3 mb-3 bg-my-color-3 bg-opacity-75 text-white">laranja com 75% de opacidade </div>
+          <div class="p-3 mb-3 bg-my-color-3 bg-opacity-50 text-white">laranja com 50% de opacidade </div>
+          <div class="p-3 mb-3 bg-my-color-3 bg-opacity-25 text-white">laranja com 25% de opacidade </div>
+          <div class="p-3 mb-3 bg-my-color-3 bg-opacity-10 text-white">laranja com 10% de opacidade </div>
+          <div class="p-3 mb-3 bg-my-color-3 text-white" style="--bs-bg-opacity: .05;">laranja com 5% de opacidade </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="p-3 mb-3 bg-my-color-5 bg-gradient text-white"> marrom com gradiente </div>
+          <div class="p-3 mb-3 bg-my-color-5 text-white"> marrom puro </div>
+          <div class="p-3 mb-3 bg-my-color-5 bg-opacity-75 text-white">marrom com 75% de opacidade </div>
+          <div class="p-3 mb-3 bg-my-color-5 bg-opacity-50 text-white">marrom com 50% de opacidade </div>
+          <div class="p-3 mb-3 bg-my-color-5 bg-opacity-25 text-white">marrom com 25% de opacidade </div>
+          <div class="p-3 mb-3 bg-my-color-5 bg-opacity-10 text-white">marrom com 10% de opacidade </div>
+          <div class="p-3 mb-3 bg-my-color-5 text-white" style="--bs-bg-opacity: .05;">marrom com 5% de opacidade </div>
+        </div>
       </div>
     </div>
     <!-- =================FIM-->
